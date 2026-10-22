@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View your simulated order confirmation in Smart Meal Discovery.">
+  <title>Order Confirmed | Smart Meal Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html">smart<span>meal</span>.</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover Meals</a>
+        <a href="cart.html">Your Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">THANK YOU FOR EXPLORING</p>
+      <h1 id="confirmation-heading">Your demo order is complete!</h1>
+      <p id="confirmation-description">
+        Your simulated checkout journey has been completed successfully.
+      </p>
+
+      <div class="card" style="max-width: 650px;">
+        <h2>Order details</h2>
+        <p id="demo-order-id">Loading your demo order...</p>
+        <div id="confirmed-items"></div>
+        <div id="confirmed-total"></div>
+      </div>
+
+      <p class="notice" style="max-width: 650px; margin-top: 24px;">
+        <strong>Reminder:</strong> This is an educational prototype.
+        No real order was sent to a restaurant, and no payment or delivery
+        has taken place.
+      </p>
+
+      <a class="button" href="discover.html">Discover More Meals &rarr;</a>
+      <a class="button button-accent" href="index.html">Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Smart Meal Discovery · An educational prototype for KPI analysis.</p>
+    </div>
+  </footer>
+
+  <script>
+    const orderIdElement = document.getElementById("demo-order-id");
+    const itemsElement = document.getElementById("confirmed-items");
+    const totalElement = document.getElementById("confirmed-total");
+
+    let order = null;
+
+    try {
+      order = JSON.parse(localStorage.getItem("smartMealLastOrder") || "null");
+    } catch {
+      order = null;
+    }
+
+    if (!order || !Array.isArray(order.items) || !order.demoOrderId) {
+      orderIdElement.textContent =
+        "No recent demo order was found in this browser.";
+      itemsElement.textContent =
+        "Complete a demo checkout to see order details here.";
+      totalElement.textContent = "";
+    } else {
+      orderIdElement.textContent = `Demo order ID: ${order.demoOrderId}`;
+
+      order.items.forEach((item) => {
+        const line = document.createElement("p");
+        line.textContent =
+          `${item.name} × ${item.quantity} — ₹${item.price * item.quantity}`;
+        itemsElement.appendChild(line);
+      });
+
+      totalElement.textContent = `Demo subtotal: ₹${order.subtotal}`;
+    }
+  </script>
+</body>
+</html>
