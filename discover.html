@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover meals by budget, cuisine, dietary preference and estimated delivery time.">
+  <title>Discover Meals | Smart Meal Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html">smart<span>meal</span>.</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="discover.html" aria-current="page">Discover Meals</a>
+        <a href="cart.html">Your Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <p class="eyebrow">YOUR TASTE, YOUR RULES</p>
+      <h1>Find food that fits your life.</h1>
+      <p>
+        Set your preferences and explore meal options selected around
+        your budget, cravings and lifestyle.
+      </p>
+    </section>
+
+    <section class="section container" aria-labelledby="filters-heading">
+      <h2 id="filters-heading">Make it your kind of meal</h2>
+      <p>Adjust your preferences to narrow down the options.</p>
+
+      <form id="discovery-form" class="filter-panel">
+        <div class="form-field">
+          <label for="budget">Maximum budget</label>
+          <select id="budget" name="budget">
+            <option value="150">Up to ₹150</option>
+            <option value="300" selected>Up to ₹300</option>
+            <option value="500">Up to ₹500</option>
+            <option value="1000">Up to ₹1,000</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="cuisine">Cuisine</label>
+          <select id="cuisine" name="cuisine">
+            <option value="all">Any cuisine</option>
+            <option value="Indian">Indian</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="diet">Dietary preference</label>
+          <select id="diet" name="diet">
+            <option value="all">Any preference</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Non-vegetarian">Non-vegetarian</option>
+            <option value="Vegan">Vegan</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="delivery">Maximum delivery time</label>
+          <select id="delivery" name="delivery">
+            <option value="20">Within 20 minutes</option>
+            <option value="30" selected>Within 30 minutes</option>
+            <option value="45">Within 45 minutes</option>
+            <option value="60">Within 60 minutes</option>
+          </select>
+        </div>
+
+        <div>
+          <button class="button" type="submit">Find My Meal &rarr;</button>
+          <button class="button button-accent" type="reset">Reset Filters</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section container" aria-labelledby="results-heading">
+      <p class="eyebrow">CURATED FOR YOUR CRAVINGS</p>
+      <h2 id="results-heading">Explore your matches</h2>
+
+      <p id="results-summary" aria-live="polite">
+        Your matching meal options will appear here.
+      </p>
+
+      <div id="restaurant-results" class="restaurant-grid">
+        <article class="card">
+          <h3>Your next meal awaits</h3>
+          <p>
+            Apply your preferences to explore our illustrative
+            restaurant and meal collection.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="notice">
+        <strong>Educational prototype:</strong> This website is independent
+        and is not affiliated with or endorsed by Zomato. Restaurant listings,
+        prices and delivery estimates are illustrative. No real orders
+        or payments are processed.
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Smart Meal Discovery · An educational prototype for KPI analysis.</p>
+    </div>
+  </footer>
+</body>
+</html>
