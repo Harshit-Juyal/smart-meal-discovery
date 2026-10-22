@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Complete a simulated checkout for the Smart Meal Discovery educational prototype.">
+  <title>Demo Checkout | Smart Meal Discovery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html">smart<span>meal</span>.</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover Meals</a>
+        <a href="cart.html">Your Cart</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">ONE LAST STEP</p>
+      <h1>Demo checkout.</h1>
+      <p>Review your order and enter sample details to complete the simulated journey.</p>
+    </section>
+
+    <section class="section">
+      <div class="card" style="max-width: 720px;">
+        <h2>Order summary</h2>
+        <div id="checkout-summary" aria-live="polite">
+          <p>Loading your order...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <form id="checkout-form" class="card" style="max-width: 720px;">
+        <h2>Your details</h2>
+
+        <div class="form-field">
+          <label for="customer-name">Name</label>
+          <input id="customer-name" name="customerName" type="text"
+                 autocomplete="name" required maxlength="80">
+        </div>
+
+        <div class="form-field" style="margin-top: 16px;">
+          <label for="customer-email">Email</label>
+          <input id="customer-email" name="customerEmail" type="email"
+                 autocomplete="email" required maxlength="120">
+        </div>
+
+        <p class="notice" style="margin-top: 20px;">
+          This is an educational simulation. Do not enter sensitive personal
+          information. No real order, payment or delivery will take place.
+        </p>
+
+        <button class="button button-accent" type="submit">
+          Confirm Demo Order
+        </button>
+
+        <p id="checkout-message" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Smart Meal Discovery · An educational prototype for KPI analysis.</p>
+    </div>
+  </footer>
+
+  <script src="js/checkout.js"></script>
+</body>
+</html>
