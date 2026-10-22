@@ -6,56 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Discover meals that fit your budget, taste and lifestyle. An independent educational prototype.">
   <title>Smart Meal Discovery | Find Your Next Favourite Meal</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html" aria-label="Smart Meal Discovery home">
-        <strong>smart<span>meal</span>.</strong>
-      </a>
-      <a href="discover.html">Discover Meals</a>
-      <a href="cart.html">Your Cart</a>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html">smart<span>meal</span>.</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="discover.html">Discover Meals</a>
+        <a href="cart.html">Your Cart</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <p>GOOD FOOD. SMARTER CHOICES.</p>
+    <section class="hero container">
+      <p class="eyebrow">GOOD FOOD. SMARTER CHOICES.</p>
       <h1>Your next favourite meal is just a little discovery away.</h1>
       <p>
         Find meals that fit your budget, your cravings and your lifestyle.
         Less scrolling, more savouring.
       </p>
-      <a href="discover.html">Discover Your Meal &rarr;</a>
+      <a class="button" href="discover.html">Discover Your Meal &rarr;</a>
     </section>
 
-    <section aria-labelledby="how-it-works">
+    <section class="section container" aria-labelledby="how-it-works">
+      <p class="eyebrow">A BETTER WAY TO CHOOSE</p>
       <h2 id="how-it-works">A smarter way to find food</h2>
+      <p>Good food should fit your preferences, not the other way around.</p>
 
-      <article>
-        <h3>01. Set your preferences</h3>
-        <p>Choose your budget, favourite cuisine, dietary preference and preferred delivery time.</p>
-      </article>
+      <div class="card-grid">
+        <article class="card">
+          <h3>01. Set your preferences</h3>
+          <p>Choose your budget, favourite cuisine, dietary preference and preferred delivery time.</p>
+        </article>
 
-      <article>
-        <h3>02. Explore your matches</h3>
-        <p>Browse illustrative restaurant options that match your selected preferences.</p>
-      </article>
+        <article class="card">
+          <h3>02. Explore your matches</h3>
+          <p>Browse illustrative restaurant options that match your selected preferences.</p>
+        </article>
 
-      <article>
-        <h3>03. Choose with confidence</h3>
-        <p>Compare menu options and build your demo order at your own pace.</p>
-      </article>
+        <article class="card">
+          <h3>03. Choose with confidence</h3>
+          <p>Compare menu options and build your demo order at your own pace.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="notice">
+        <strong>About this project:</strong> Smart Meal Discovery is an independent
+        educational prototype. It is not affiliated with or endorsed by Zomato.
+        Restaurants, prices and delivery estimates are illustrative. No real
+        food orders or payments are processed.
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      Smart Meal Discovery is an independent educational prototype.
-      It is not affiliated with or endorsed by Zomato.
-      All restaurants, prices and delivery estimates are illustrative.
-      No real food orders or payments are processed.
-    </p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Smart Meal Discovery · An educational prototype for KPI analysis.</p>
+    </div>
   </footer>
 </body>
 </html>
